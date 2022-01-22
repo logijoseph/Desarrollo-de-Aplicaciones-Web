@@ -1,7 +1,7 @@
 let list = document.getElementsByClassName("Lista");
 let textArea = document.getElementById("newText");
 
-$("button.agregar").click(function (e) {
+$(".agregar").click(function (e) {
     e.preventDefault();
 
     let div = document.createElement("div");
@@ -25,10 +25,10 @@ $("button.agregar").click(function (e) {
     list[0].appendChild(div);
 });
 
-$("button.del").on("click", function (event) {    
+$(document).on("click", "button.del", function () {    
     $(this).parent().remove();
 })
 
-$("button.checar").on("click", function (event) {    
+$(document).on("click", "button.checar", function () {    
     $(this).parent().toggleClass("chec");
 })
